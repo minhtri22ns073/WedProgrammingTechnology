@@ -48,53 +48,41 @@
 ?>
 
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-    table, th, td {
-      border: 1px solid black;
-    }
-  </style>
-</head>
-
-<body>
-  <form action="giai_pt_bac_2.php" method="POST" >
-    <table style="width:100%">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Untitled Document</title>
+  </head>
+  <body>
+    <form action="giai_pt_bac_2.php" method="post" >
+      <table width="806" border="1">
       <tr>
-        <th>Giải phương trình bậc 2</th>
+      <td colspan="4" bgcolor="#336699"><strong>Giải phương trình bậc 2</strong></td>
       </tr>
       <tr>
-        <td>Phương trình</td>
-        <td>
-          <input type="text" name="value_a" id=""> X^2 +
-        </td>
-        <td>
-          <input type="text" name="value_b" id=""> X+
-        </td>
-        <td>
-          <input type="text" name="value_c" id=""> = 0
-        </td>
+      <td width="83">Phương trình </td>
+      <td width="236">
+      <input name="value_a" type="text" />
+      X^2 + </td>
+      <td width="218"><label for="textfield3"></label>
+      <input type="text" name="value_b" id="textfield3" />
+      X+</td>
+      <td width="241"><label for="textfield"></label>
+      <input type="text" name="value_c" id="textfield" />
+      =0</td>
       </tr>
       <tr>
-        <td>
-          Nghiệm
-          <span>
-            <?php if(isset($nghiem)) echo $nghiem ;?>
-          </span>
-        </td>
-      </tr>
+      <td colspan="4">
+      Nghiệm 
+      <label for="textfield2"></label>
+      <input name="nghiem" type="text" id="textfield2" width="1000" value="<?php if (isset($nghiem)) echo $nghiem; ?>" /></tr>
       <tr>
-        <td>
-          <input type="Submit" name="" id="">
-        </td>
+      <td colspan="4" align="center" valign="middle"><input type="submit" name="chao" 
+      id="chao" value="Xuất" /></td>
       </tr>
-    </table>
-  </form>
-</body>
-
+      </table>
+    </form>
+  </body>
 </html>
